@@ -1,6 +1,6 @@
 <template>
   <div
-    id="rus-account-search"
+    id="search-box-container"
     class="group"
   >
     <!-- Search SVG -->
@@ -79,7 +79,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
-#rus-account-search {
+#search-box-container {
   @apply w-full max-w-sm relative overflow-hidden
     focus-within:ring-1 focus-within:ring-teal-500 focus-within:outline-none
     ring-1 ring-slate-300 rounded-md;

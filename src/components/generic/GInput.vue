@@ -2,9 +2,9 @@
   <input
     v-bind="attrs"
     :class="cn(
-      'rus-input',
+      'g-input',
       {
-        'rus-input-error': attrs.error,
+        'g-input-error': attrs.error,
       },
     )"
     v-maska:[options]
@@ -13,7 +13,7 @@
 
   <div
     v-if="attrs.error"
-    class="rus-error-text"
+    class="g-error-text"
   >
     {{ attrs.error }}
   </div>
@@ -32,7 +32,7 @@ const options = reactive({
 </script>
 
 <style scoped lang="scss">
-.rus-input {
+.g-input {
   @apply py-2 px-3 leading-none text-base font-medium
     bg-teal-100/30 text-teal-900 rounded-md shadow-none
     ring-1 ring-teal-500/30 focus:ring-1 focus:ring-teal-500
@@ -41,12 +41,12 @@ const options = reactive({
     placeholder-teal-500/60 placeholder:font-normal
     transition duration-200 ease-in-out tracking-wide;
 
-  &.rus-input-error {
+  &.g-input-error {
     @apply ring-red-500/30 focus:ring-red-500;
   }
 }
 
-.rus-error-text {
+.g-error-text {
   @apply text-sm text-red-500 pt-1 pb-2.5 leading-4;
 }
 </style>
