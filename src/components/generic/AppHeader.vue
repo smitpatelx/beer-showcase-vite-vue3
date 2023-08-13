@@ -29,7 +29,7 @@
 
       <div class="w-auto flex flex-row flex-nowrap items-center justify-end gap-x-4 p-1">
         <a
-          href="https://github.com/smitpatelx/"
+          :href="GITHUB_LINK"
           class="text-teal-800 text-base font-medium rounded-md
             flex flex-row flex-nowrap items-center justify-center
             gap-x-1.5 hover:text-teal-600 pl-1 pr-1.5 py-0.5 ring-1 ring-teal-800
@@ -49,4 +49,6 @@
 <script setup lang="ts">
 import GIcon from '@/components/generic/GIcon.vue';
 import { mdiGithub } from '@mdi/js';
+
+const GITHUB_LINK = 'https://github.com/smitpatelx/beer-showcase-vite-vue3';
 </script>
