@@ -1,0 +1,161 @@
+/*
+  Enter and leave animations can use different
+  durations and timing functions.
+*/
+.swing-in-top-fwd {
+  &-enter-active {
+    animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+
+  &-leave-active {
+    animation: swing-in-top-fwd 0.3s ease-out reverse;
+  }
+
+  @keyframes swing-in-top-fwd {
+    0% {
+      transform: rotateX(-100deg);
+      transform-origin: top;
+      opacity: 0;
+    }
+    100% {
+      transform: rotateX(0deg);
+      transform-origin: top;
+      opacity: 1;
+    }
+  }
+}
+
+.slide-in-blurred-right {
+  &-enter-active {
+    animation: slide-in-blurred-right 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  }
+
+  &-leave-active {
+    animation: slide-in-blurred-right 0.3s cubic-bezier(0.23, 1, 0.32, 1) reverse;
+  }
+
+  @keyframes slide-in-blurred-right {
+    0% {
+      transform: translateX(1000px) scaleX(2.5) scaleY(0.2);
+      transform-origin: center;
+      filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0) scaleY(1) scaleX(1);
+      transform-origin: center;
+      filter: blur(0);
+      opacity: 1;
+    }
+  }
+}
+
+.zoom-up {
+  &-enter-active {
+    animation: zoom-up 0.5s ease-in-out;
+  }
+
+  &-leave-active {
+    animation: zoom-up 0.3s reverse ease-out;
+  }
+
+  @keyframes zoom-up {
+    0% {
+      transform: scale(0) translateY(-200px);
+      filter: blur(10px);
+      transform-origin: center;
+      opacity: 0;
+    }
+
+    100% {
+      transform: scale(1) translateY(0px);
+      filter: blur(0);
+      transform-origin: center;
+      opacity: 1;
+    }
+  }
+}
+
+/*
+  Fade enter and leave animations use the same
+  duration and timing function.
+*/
+.fade-in-enter-active,
+.fade-in-leave-active {
+  transition: all 0.4s ease-out;
+  opacity: 1;
+}
+
+.fade-in-enter-from,
+.fade-in-leave-to {
+  transition: all 0.2s ease-out;
+  opacity: 0;
+}
+
+.vue-notification-group {
+  @apply transform -translate-y-2 left-1/2 -translate-x-1/2 #{!important};
+
+  &,
+  & > span {
+    @apply w-full max-w-sm #{!important};
+  }
+
+  .vue-notification-wrapper {
+    @apply overflow-visible;
+  }
+
+  .vue-notification {
+    @apply px-4 py-2 rounded-lg shadow-md border border-teal-500
+      bg-teal-300 leading-none w-full my-2 #{!important};
+
+    // default
+    .notification-title {
+      @apply text-base font-semibold text-teal-900;
+    }
+
+    // default
+    .notification-content {
+      @apply text-sm font-normal text-teal-700;
+    }
+
+    &.rus-success {
+      @apply bg-gradient-to-br from-teal-200 via-teal-300 to-teal-400 border border-teal-500;
+
+      .notification-title {
+        @apply text-teal-700;
+      }
+
+      .notification-content {
+        @apply text-teal-900;
+      }
+    }
+
+    &.rus-error {
+      @apply bg-red-500 border border-red-800 #{!important};
+
+      .notification-title {
+        @apply text-red-200;
+      }
+
+      .notification-content {
+        @apply text-red-50;
+      }
+    }
+
+    &.rus-warn {
+      @apply bg-yellow-500 border border-yellow-800;
+
+      .notification-title {
+        @apply text-yellow-900;
+      }
+
+      .notification-content {
+        @apply text-yellow-50;
+      }
+    }
+  }
+}
+
+.notifications {
+  position: absolute !important;
+}

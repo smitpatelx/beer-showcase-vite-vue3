@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"typescript.tsdk": "node_modules/typescript/lib",
+    // Format ts, scss, html, css, json, js, env, vue, md, yml, yaml, graphql, vue-html, vue-css, vue-json, vue using prettier
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.configPath": ".prettierrc.json",
+    // Format on save
+    "editor.formatOnSave": false,
+	}
+}
