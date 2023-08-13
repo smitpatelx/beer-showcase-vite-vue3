@@ -5,7 +5,7 @@
         justify-between container mx-auto gap-y-3 md:gap-y-0"
     >
       <SearchBox />
-    
+
       <div
         class="flex flex-row flex-wrap items-center justify-end
         gap-1.5 md:gap-y-2 md:gap-x-2 xl:gap-x-4"

@@ -12,9 +12,11 @@
             alt="Beer Showcase"
             class="w-7 h-7 inline-block m-0 text-teal-700"
           />
-          <div class="w-3 h-3 bg-teal-500 absolute -top-1 right-0 rounded-full
+          <div
+            class="w-3 h-3 bg-teal-500 absolute -top-1 right-0 rounded-full
             bg-gradient-to-tr from-teal-200 via-teal-400 to-teal-600
-            animate-ping transition-all duration-500 ease-in-out" />
+            animate-ping transition-all duration-500 ease-in-out"
+          />
         </div>
         <h2
           class="text-lg font-semibold text-transparent
@@ -24,7 +26,7 @@
           Beer Showcase
         </h2>
       </div>
-    
+
       <div class="w-auto flex flex-row flex-nowrap items-center justify-end gap-x-4 p-1">
         <a
           href="https://github.com/smitpatelx/"

@@ -16,9 +16,7 @@
           ring-0 transition duration-200 ease-in-out"
       />
     </Switch>
-    <p class="text-base font-medium text-teal-800">
-      Show Centennial
-    </p>
+    <p class="text-base font-medium text-teal-800">Show Centennial</p>
   </div>
 </template>
 

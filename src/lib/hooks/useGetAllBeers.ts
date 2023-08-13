@@ -6,7 +6,7 @@ const useGetAllBeers = () => {
     queryKey: ['get-all-user'],
     queryFn: async () => {
       const res = await getBeers({
-        brewed_after: '11-2012'
+        brewed_after: '11-2012',
       });
       return res;
     },

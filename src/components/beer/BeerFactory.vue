@@ -13,12 +13,14 @@
         :width="400"
         :height="700"
         class="w-full h-[90%] object-contain z-20 absolute"
-      >
-      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+      />
+      <div
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
         bg-gradient-to-tr from-teal-600 via-teal-400 to-teal-50 w-36 h-36 rounded-full
         z-0 blur-lg group-hover:opacity-100 opacity-30 transition-opacity duration-300
-        ease-in-out" />
-      
+        ease-in-out"
+      />
+
       <div
         v-if="beer?.isDryHopped"
         class="rounded-tl-full rounded-br-full bg-teal-600 leading-none
@@ -30,7 +32,9 @@
       </div>
     </div>
 
-    <div class="w-full flex flex-col flex-nowrap px-3 lg:px-4 pt-3 border-t border-zinc-100 group-hover:border-teal-200">
+    <div
+      class="w-full flex flex-col flex-nowrap px-3 lg:px-4 pt-3 border-t border-zinc-100 group-hover:border-teal-200"
+    >
       <h3 class="overflow-hidden text-ellipsis line-clamp-1 text-xl font-semibold text-zinc-800">
         {{ beer?.name || '--' }}
       </h3>
@@ -64,12 +68,22 @@
       <p class="text-sm font-normal text-zinc-500 mt-2">
         {{ beer?.tagline || '--' }}
       </p>
-      <p class="text-base font-normal text-teal-800 group-hover:text-teal-600 mt-1.5 line-clamp-3 tracking-tight leading-5">
+      <p
+        class="text-base font-normal text-teal-800 group-hover:text-teal-600 mt-1.5 line-clamp-3 tracking-tight leading-5"
+      >
         {{ beer?.description || '--' }}
       </p>
-      <div v-if="beer?.isLactose" class="text-sm font-semibold text-amber-700 group-hover:text-amber-900 mt-3 -mb-3 leading-4">
-        <span class="inline-block bg-amber-100 group-hover:bg-amber-500/30 rounded-full px-2.5 py-1 overflow-hidden">
-          <GIcon :icon="mdiAlert" class-name="w-4 h-4 inline-block mr-1" />
+      <div
+        v-if="beer?.isLactose"
+        class="text-sm font-semibold text-amber-700 group-hover:text-amber-900 mt-3 -mb-3 leading-4"
+      >
+        <span
+          class="inline-block bg-amber-100 group-hover:bg-amber-500/30 rounded-full px-2.5 py-1 overflow-hidden"
+        >
+          <GIcon
+            :icon="mdiAlert"
+            class-name="w-4 h-4 inline-block mr-1"
+          />
           Lactose
         </span>
       </div>

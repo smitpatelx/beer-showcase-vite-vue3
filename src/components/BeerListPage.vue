@@ -6,15 +6,11 @@
       class="flex flex-row items-center justify-end mb-4 container mx-auto
         gap-x-1.5 text-sm font-normal text-zinc-700"
     >
-      <p class="opacity-50">
-        Showing
-      </p>
+      <p class="opacity-50">Showing</p>
       <p class="font-medium">
         {{ computedList.length }}
       </p>
-      <p class="opacity-50">
-        out of
-      </p>
+      <p class="opacity-50">out of</p>
       <p class="font-medium">
         {{ getAllBeersQ.data.value?.length }}
       </p>
@@ -26,7 +22,11 @@
       class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 
         gap-2 lg:gap-3 pb-5 container mx-auto"
     >
-      <BeerFactory v-for="beer in computedList" :beer="beer" :key="beer.id" />
+      <BeerFactory
+        v-for="beer in computedList"
+        :beer="beer"
+        :key="beer.id"
+      />
     </div>
 
     <!-- Loader -->
@@ -35,10 +35,13 @@
       class="flex flex-col items-center justify-center gap-y-3 py-6
         h-[calc(100vh-10rem)]"
     >
-      <GSpinner show color="teal" size="lg" className="w-11 h-11" />
-      <p class="text-base font-medium text-teal-800 animate-pulse">
-        Loading beers...
-      </p>
+      <GSpinner
+        show
+        color="teal"
+        size="lg"
+        className="w-11 h-11"
+      />
+      <p class="text-base font-medium text-teal-800 animate-pulse">Loading beers...</p>
     </div>
 
     <!-- No data message -->
@@ -50,12 +53,8 @@
         :icon="mdiCancel"
         className="w-12 h-12 text-teal-400 inline-block"
       />
-      <p class="text-2xl font-medium text-teal-800">
-        No beers found
-      </p>
-      <p class="text-base font-normal text-teal-500">
-        Please try changing your filters.
-      </p>
+      <p class="text-2xl font-medium text-teal-800">No beers found</p>
+      <p class="text-base font-normal text-teal-500">Please try changing your filters.</p>
     </div>
   </div>
 </template>
@@ -121,11 +120,11 @@ const computedList = computed(() => {
             configurable: true,
           });
 
-          
+
         }
       }
     });
-    
+
     // Hops centennial
     if (!showCentennial.value) {
       sortedArray = sortedArray.filter((beer) => {

@@ -1,5 +1,5 @@
-import { Unit } from "@/interfaces/beers";
-import type { BoilVolume } from "@/interfaces/beers";
+import { Unit } from '@/interfaces/beers';
+import type { BoilVolume } from '@/interfaces/beers';
 
 const UnitMap = {
   [Unit.Litres]: 'L',
@@ -11,4 +11,4 @@ const UnitMap = {
 export const formatVolume = (data: BoilVolume) => {
   const { value, unit } = data;
   return `${value} ${UnitMap[unit]}`;
-}
+};
