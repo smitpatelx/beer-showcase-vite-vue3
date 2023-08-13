@@ -2,6 +2,7 @@
   "name": "beer-showcase-vite-vue3",
   "version": "1.0.0",
   "private": false,
+  "license": "MIT",
   "scripts": {
     "w": "vite build --watch",
     "dev": "vite",
